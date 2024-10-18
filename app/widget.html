@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Угода з Курсовими Даними</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .field {
+        margin-bottom: 1rem;
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Угода</h1>
+      <div class="field">
+        <label for="nbuRate">Курс НБУ:</label>
+        <input type="text" id="nbuRate" readonly />
+      </div>
+      <div class="field">
+        <label for="agreementRate">Курс в Угоді:</label>
+        <input type="number" id="agreementRate" value="50" readonly />
+      </div>
+      <div class="field">
+        <label for="rateDifference">Різниця курсу (%):</label>
+        <input type="text" id="rateDifference" readonly />
+      </div>
+      <button id="updateButton" class="hidden">Оновити курс</button>
+    </div>
+
+    <script src="https://live.zwidgets.com/js-sdk/1.2/ZohoEmbededAppSDK.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
